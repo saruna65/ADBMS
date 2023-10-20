@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebApplication2.Models.BOOKING>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h1>
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    </h1>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MEM_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.F_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BOOK_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIME_SLOT)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MEM_NO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F_NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BOOK_DATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TIME_SLOT)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BOOKING_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BOOKING_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BOOKING_ID })
+            </td>
+        </tr>
+    }
+
+</table>

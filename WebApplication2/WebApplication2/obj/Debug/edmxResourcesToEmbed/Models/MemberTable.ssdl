@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MembersModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="18.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MEMBERS">
+    <Key>
+      <PropertyRef Name="MEM_ID" />
+    </Key>
+    <Property Name="MEM_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" MaxLength="20" />
+    <Property Name="ADDRESS" Type="varchar2" MaxLength="50" />
+    <Property Name="GENDER" Type="varchar2" MaxLength="5" />
+    <Property Name="MOBILENO" Type="varchar2" MaxLength="20" />
+    <Property Name="DISABILITIES" Type="varchar2" MaxLength="50" />
+    <Property Name="ECP" Type="varchar2" MaxLength="20" />
+    <Property Name="ECPN" Type="varchar2" MaxLength="20" />
+    <Property Name="MEMBERSHIPTYPE" Type="varchar2" MaxLength="20" />
+    <Property Name="REGISTEREDDATE" Type="date" />
+  </EntityType>
+  <EntityContainer Name="MembersModelStoreContainer">
+    <EntitySet Name="MEMBERS" EntityType="Self.MEMBERS" Schema="SARUNAASUS" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

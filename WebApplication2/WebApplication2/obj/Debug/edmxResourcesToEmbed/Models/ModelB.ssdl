@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeB.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="18.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MEMBERSHIPS">
+    <Key>
+      <PropertyRef Name="MEMBERSHIP_NO" />
+    </Key>
+    <Property Name="MEMBERSHIP_NO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MEMBERSHIP_TYPE" Type="varchar2" MaxLength="255" />
+    <Property Name="MEM_PERIOD" Type="number" Precision="38" Scale="0" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="255" />
+    <Property Name="PAY_DATE" Type="date" />
+    <Property Name="PRICE" Type="number" Precision="10" Scale="2" />
+  </EntityType>
+  <Function Name="UPDATEMEMBERSHIPSTATUS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="SARUNAASUS" ReturnType="number" />
+  <EntityContainer Name="ModeBStoreContainer">
+    <EntitySet Name="MEMBERSHIPS" EntityType="Self.MEMBERSHIPS" Schema="SARUNAASUS" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

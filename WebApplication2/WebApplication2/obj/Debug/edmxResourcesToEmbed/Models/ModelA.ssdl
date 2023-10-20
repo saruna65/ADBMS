@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelA.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="18.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ATTENDANCE">
+    <Key>
+      <PropertyRef Name="MEMBER_NO" />
+    </Key>
+    <Property Name="MEMBER_NO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ATTENDANCE_DATE" Type="date" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="20" />
+    <Property Name="ATT_TIME" Type="timestamp" Precision="6" />
+  </EntityType>
+  <EntityContainer Name="ModelAStoreContainer">
+    <EntitySet Name="ATTENDANCE" EntityType="Self.ATTENDANCE" Schema="SARUNAASUS" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

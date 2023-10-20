@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeB" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MEMBERSHIP">
+    <Key>
+      <PropertyRef Name="MEMBERSHIP_NO" />
+    </Key>
+    <Property Name="MEMBERSHIP_NO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MEMBERSHIP_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MEM_PERIOD" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="STATUS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_DATE" Type="DateTime" />
+    <Property Name="PRICE" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityContainer Name="Entities6" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MEMBERSHIPS" EntityType="Self.MEMBERSHIP" />
+  </EntityContainer>
+</Schema>

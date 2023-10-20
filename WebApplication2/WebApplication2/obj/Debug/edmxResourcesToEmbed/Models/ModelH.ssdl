@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelH.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="18.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HEALTHDETAILS">
+    <Key>
+      <PropertyRef Name="MEMBERSHIP_NO" />
+    </Key>
+    <Property Name="MEMBERSHIP_NO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DISABILITIES" Type="varchar2" MaxLength="255" />
+    <Property Name="HEIGHT" Type="float" Precision="126" Scale="0" />
+    <Property Name="WEIGHT" Type="float" Precision="126" Scale="0" />
+    <Property Name="BMI" Type="varchar2" MaxLength="255" />
+    <Property Name="BMI_CAT" Type="varchar2" MaxLength="255" />
+  </EntityType>
+  <Function Name="CALCULATE_UPDATE_AND_CATEGORIZE_BMINEW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="SARUNAASUS" ReturnType="number">
+    <Parameter Name="P_MEMBERSHIP_NO" Type="number" Mode="In" />
+  </Function>
+  <EntityContainer Name="ModelHStoreContainer">
+    <EntitySet Name="HEALTHDETAILS" EntityType="Self.HEALTHDETAILS" Schema="SARUNAASUS" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

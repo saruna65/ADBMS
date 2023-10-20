@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelE" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="EXPIREDMEMBER">
+    <Key>
+      <PropertyRef Name="MEMBERSHIP_NO" />
+    </Key>
+    <Property Name="MEMBERSHIP_NO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MEM_STATUS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EXPIRED_DATE" Type="DateTime" />
+  </EntityType>
+  <EntityContainer Name="Entities7" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EXPIREDMEMBERS" EntityType="Self.EXPIREDMEMBER" />
+  </EntityContainer>
+</Schema>

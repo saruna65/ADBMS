@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeBStoreContainer" CdmEntityContainer="Entities6">
+    <EntitySetMapping Name="MEMBERSHIPS">
+      <EntityTypeMapping TypeName="ModeB.MEMBERSHIP">
+        <MappingFragment StoreEntitySet="MEMBERSHIPS">
+          <ScalarProperty Name="MEMBERSHIP_NO" ColumnName="MEMBERSHIP_NO" />
+          <ScalarProperty Name="MEMBERSHIP_TYPE" ColumnName="MEMBERSHIP_TYPE" />
+          <ScalarProperty Name="MEM_PERIOD" ColumnName="MEM_PERIOD" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="PAY_DATE" ColumnName="PAY_DATE" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

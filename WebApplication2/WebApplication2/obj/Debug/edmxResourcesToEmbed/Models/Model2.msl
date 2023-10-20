@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model2StoreContainer" CdmEntityContainer="Entities3">
+    <EntitySetMapping Name="HEALTHDETAILS">
+      <EntityTypeMapping TypeName="Model2.HEALTHDETAIL">
+        <MappingFragment StoreEntitySet="HEALTHDETAILS">
+          <ScalarProperty Name="MEMBERSHIP_NO" ColumnName="MEMBERSHIP_NO" />
+          <ScalarProperty Name="DISABILITIES" ColumnName="DISABILITIES" />
+          <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+          <ScalarProperty Name="BMI" ColumnName="BMI" />
+          <ScalarProperty Name="BMI_CAT" ColumnName="BMI_CAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

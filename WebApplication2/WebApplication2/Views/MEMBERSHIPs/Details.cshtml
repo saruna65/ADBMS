@@ -1,0 +1,58 @@
+﻿@model WebApplication2.Models.MEMBERSHIP
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MEMBERSHIP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MEMBERSHIP_TYPE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEMBERSHIP_TYPE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEM_PERIOD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEM_PERIOD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAY_DATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAY_DATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRICE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRICE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MEMBERSHIP_NO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

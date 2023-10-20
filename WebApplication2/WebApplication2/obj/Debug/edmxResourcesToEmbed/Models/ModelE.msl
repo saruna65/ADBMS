@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelEStoreContainer" CdmEntityContainer="Entities7">
+    <EntitySetMapping Name="EXPIREDMEMBERS">
+      <EntityTypeMapping TypeName="ModelE.EXPIREDMEMBER">
+        <MappingFragment StoreEntitySet="EXPIREDMEMBERS">
+          <ScalarProperty Name="MEMBERSHIP_NO" ColumnName="MEMBERSHIP_NO" />
+          <ScalarProperty Name="MEM_STATUS" ColumnName="MEM_STATUS" />
+          <ScalarProperty Name="EXPIRED_DATE" ColumnName="EXPIRED_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

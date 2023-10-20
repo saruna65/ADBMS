@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ModelM.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="18.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MEMBERS">
+          <Key>
+            <PropertyRef Name="MEMBERSHIP_NO" />
+          </Key>
+          <Property Name="MEMBERSHIP_NO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FULL_NAME" Type="varchar2" MaxLength="255" />
+          <Property Name="GENDER" Type="varchar2" MaxLength="255" />
+          <Property Name="ADDRESS" Type="varchar2" MaxLength="255" />
+          <Property Name="MOBILE_NO" Type="number" Precision="38" Scale="0" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="EMER_CONT_PERS" Type="varchar2" MaxLength="255" />
+          <Property Name="EMER_CONT_PERS_NO" Type="number" Precision="38" Scale="0" />
+          <Property Name="SYS_PASSWORD" Type="varchar2" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="ModelMStoreContainer">
+          <EntitySet Name="MEMBERS" EntityType="Self.MEMBERS" Schema="SARUNAASUS" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModelM" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MEMBER">
+          <Key>
+            <PropertyRef Name="MEMBERSHIP_NO" />
+          </Key>
+          <Property Name="MEMBERSHIP_NO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FULL_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="GENDER" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="MOBILE_NO" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="DOB" Type="DateTime" />
+          <Property Name="EMER_CONT_PERS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="EMER_CONT_PERS_NO" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="SYS_PASSWORD" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Entities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MEMBERS" EntityType="Self.MEMBER" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelMStoreContainer" CdmEntityContainer="Entities4">
+          <EntitySetMapping Name="MEMBERS">
+            <EntityTypeMapping TypeName="ModelM.MEMBER">
+              <MappingFragment StoreEntitySet="MEMBERS">
+                <ScalarProperty Name="MEMBERSHIP_NO" ColumnName="MEMBERSHIP_NO" />
+                <ScalarProperty Name="FULL_NAME" ColumnName="FULL_NAME" />
+                <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="MOBILE_NO" ColumnName="MOBILE_NO" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="EMER_CONT_PERS" ColumnName="EMER_CONT_PERS" />
+                <ScalarProperty Name="EMER_CONT_PERS_NO" ColumnName="EMER_CONT_PERS_NO" />
+                <ScalarProperty Name="SYS_PASSWORD" ColumnName="SYS_PASSWORD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

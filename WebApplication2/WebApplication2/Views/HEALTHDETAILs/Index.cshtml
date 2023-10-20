@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebApplication2.Models.HEALTHDETAIL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MEMBERSHIP_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DISABILITIES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HEIGHT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WEIGHT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BMI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BMI_CAT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEMBERSHIP_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DISABILITIES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HEIGHT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WEIGHT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BMI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BMI_CAT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.MEMBERSHIP_NO }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MEMBERSHIP_NO }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MEMBERSHIP_NO })
+        </td>
+    </tr>
+}
+
+</table>
