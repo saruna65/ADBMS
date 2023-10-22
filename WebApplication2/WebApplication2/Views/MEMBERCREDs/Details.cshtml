@@ -1,0 +1,26 @@
+﻿@model WebApplication2.Models.MEMBERCRED
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MEMBERCRED</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PASSSWORD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PASSSWORD)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MEMBERSHIP_NO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
