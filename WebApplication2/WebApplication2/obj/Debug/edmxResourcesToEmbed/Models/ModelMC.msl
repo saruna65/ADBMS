@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelMCStoreContainer" CdmEntityContainer="Entities10">
+    <EntitySetMapping Name="MEMBERCREDs">
+      <EntityTypeMapping TypeName="ModelMC.MEMBERCRED">
+        <MappingFragment StoreEntitySet="MEMBERCRED">
+          <ScalarProperty Name="MEMBERSHIP_NO" ColumnName="MEMBERSHIP_NO" />
+          <ScalarProperty Name="PASSSWORD" ColumnName="PASSSWORD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

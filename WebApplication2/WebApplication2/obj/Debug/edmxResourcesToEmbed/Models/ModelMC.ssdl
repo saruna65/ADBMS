@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelMC.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="18.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MEMBERCRED">
+    <Key>
+      <PropertyRef Name="MEMBERSHIP_NO" />
+    </Key>
+    <Property Name="MEMBERSHIP_NO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PASSSWORD" Type="varchar2" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="ModelMCStoreContainer">
+    <EntitySet Name="MEMBERCRED" EntityType="Self.MEMBERCRED" Schema="SARUNAASUS" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

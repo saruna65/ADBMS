@@ -22,7 +22,7 @@ namespace WebApplication2.Controllers
             return View(db.HEALTHDETAILS.ToList());
         }
 
-        // GET: HEALTHDETAILs/Details/5
+   /*     // GET: HEALTHDETAILs/Details/5
         public ActionResult Details(decimal id)
         {
             if (id == null)
@@ -36,7 +36,7 @@ namespace WebApplication2.Controllers
             }
             return View(hEALTHDETAIL);
         }
-
+   */
         // GET: HEALTHDETAILs/Create
         public ActionResult Create()
         {

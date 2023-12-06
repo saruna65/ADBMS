@@ -1,0 +1,50 @@
+﻿@model WebApplication2.Models.ADMIN
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>ADMIN</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NAME)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NAME)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PASSWORD)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PASSWORD)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.WORKING_SHIFT)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.WORKING_SHIFT)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ADMIN_ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

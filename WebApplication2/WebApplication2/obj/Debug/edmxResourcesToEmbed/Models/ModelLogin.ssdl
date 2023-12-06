@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelA.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="18.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="ADMIN_ID" />
+    </Key>
+    <Property Name="ADMIN_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" MaxLength="20" />
+    <Property Name="PASSWORD" Type="varchar2" MaxLength="20" />
+    <Property Name="WORKING_SHIFT" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="ModelAStoreContainer">
+    <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="SARUNAASUS" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

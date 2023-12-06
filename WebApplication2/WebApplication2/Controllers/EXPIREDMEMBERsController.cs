@@ -42,7 +42,7 @@ namespace WebApplication2.Controllers
 				}
 			}
 		}
-		// GET: EXPIREDMEMBERs/Details/5
+	/*	// GET: EXPIREDMEMBERs/Details/5
 		public ActionResult Details(decimal id)
         {
             if (id == null)
@@ -110,7 +110,7 @@ namespace WebApplication2.Controllers
             }
             return View(eXPIREDMEMBER);
         }
-
+    */
         // GET: EXPIREDMEMBERs/Delete/5
         public ActionResult Delete(decimal id)
         {

@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GYM Managemnet System</title>
+    <title>GYM Management System</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
@@ -61,7 +61,7 @@
                             <li>@Html.ActionLink("MEMBERSHIPS", "Index", "MEMBERSHIPs", new { area = "" }, new { @class = "dropdown-item" })</li>
                             <li>@Html.ActionLink("EXPIRED MEMBERS", "Index", "EXPIREDMEMBERs", new { area = "" }, new { @class = "dropdown-item" })</li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">MEMBERSHIP PLANS</a></li>
+                            <li>@Html.ActionLink("Membership Plans", "Index", "PACKAGEs", new { area = "" }, new { @class = "dropdown-item" })</li>
                         </ul>
                     </li>
                     <li class="nav-item">

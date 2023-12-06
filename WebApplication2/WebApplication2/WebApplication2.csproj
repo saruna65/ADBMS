@@ -163,14 +163,20 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ADMINsController.cs" />
     <Compile Include="Controllers\ATTENDANCEsController.cs" />
     <Compile Include="Controllers\BOOKINGsController.cs" />
     <Compile Include="Controllers\EXPIREDMEMBERsController.cs" />
     <Compile Include="Controllers\HEALTHDETAILsController.cs" />
+    <Compile Include="Controllers\MEMBERCREDsController.cs" />
     <Compile Include="Controllers\MEMBERsController.cs" />
     <Compile Include="Controllers\MEMBERSHIPsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ADMIN.cs">
+      <DependentUpon>ModelL.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ATTENDANCE.cs">
       <DependentUpon>ModelA.tt</DependentUpon>
@@ -186,6 +192,9 @@
     </Compile>
     <Compile Include="Models\MEMBER.cs">
       <DependentUpon>ModelM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MEMBERCRED.cs">
+      <DependentUpon>ModelMC.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MEMBERSHIP.cs">
       <DependentUpon>ModelB.tt</DependentUpon>
@@ -265,6 +274,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelH.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelL.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\ModelM.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -280,12 +304,53 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelM.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelMC.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMC.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelMC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelMC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMC.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelP.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelP.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelP.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PACKAGE.cs">
+      <DependentUpon>ModelP.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\bootstrap.css" />
-    <Content Include="assets\bootstrap.min.css" />
-    <Content Include="assets\main.css" />
+    <Content Include="Models\ModelP.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelP.edmx</DependentUpon>
+      <LastGenOutput>ModelP.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelP.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelP.edmx</DependentUpon>
+      <LastGenOutput>ModelP.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Assets\dumbbells-floor-gym-ai-generative.jpg" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -355,6 +420,16 @@
       <DependentUpon>ModelH.edmx</DependentUpon>
       <LastGenOutput>ModelH.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\ModelL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelL.edmx</DependentUpon>
+      <LastGenOutput>ModelL.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelL.edmx</DependentUpon>
+      <LastGenOutput>ModelL.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\ModelM.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelM.edmx</DependentUpon>
@@ -423,12 +498,43 @@
     <Content Include="Models\ModelA.edmx.diagram">
       <DependentUpon>ModelA.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\ModelMC.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelMC.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelMC.edmx.diagram">
+      <DependentUpon>ModelMC.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\ModelL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelL.edmx.diagram">
+      <DependentUpon>ModelL.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\ModelP.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelP.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelP.edmx.diagram">
+      <DependentUpon>ModelP.edmx</DependentUpon>
+    </Content>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Models\ModelMC.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelMC.edmx</DependentUpon>
+      <LastGenOutput>ModelMC.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelMC.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelMC.edmx</DependentUpon>
+      <LastGenOutput>ModelMC.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -470,7 +576,6 @@
     <Content Include="Views\MEMBERs\Index.cshtml" />
     <Content Include="Views\HEALTHDETAILs\Create.cshtml" />
     <Content Include="Views\HEALTHDETAILs\Delete.cshtml" />
-    <Content Include="Views\HEALTHDETAILs\Details.cshtml" />
     <Content Include="Views\HEALTHDETAILs\Edit.cshtml" />
     <Content Include="Views\HEALTHDETAILs\Index.cshtml" />
     <Content Include="Views\MEMBERSHIPs\Create.cshtml" />
@@ -478,10 +583,7 @@
     <Content Include="Views\MEMBERSHIPs\Details.cshtml" />
     <Content Include="Views\MEMBERSHIPs\Edit.cshtml" />
     <Content Include="Views\MEMBERSHIPs\Index.cshtml" />
-    <Content Include="Views\EXPIREDMEMBERs\Create.cshtml" />
     <Content Include="Views\EXPIREDMEMBERs\Delete.cshtml" />
-    <Content Include="Views\EXPIREDMEMBERs\Details.cshtml" />
-    <Content Include="Views\EXPIREDMEMBERs\Edit.cshtml" />
     <Content Include="Views\EXPIREDMEMBERs\Index.cshtml" />
     <Content Include="Views\BOOKINGs\Create.cshtml" />
     <Content Include="Views\BOOKINGs\Delete.cshtml" />
@@ -490,12 +592,22 @@
     <Content Include="Views\BOOKINGs\Index.cshtml" />
     <Content Include="Views\ATTENDANCEs\Create.cshtml" />
     <Content Include="Views\ATTENDANCEs\Delete.cshtml" />
-    <Content Include="Views\ATTENDANCEs\Details.cshtml" />
-    <Content Include="Views\ATTENDANCEs\Edit.cshtml" />
     <Content Include="Views\ATTENDANCEs\Index.cshtml" />
+    <Content Include="Views\MEMBERCREDs\Create.cshtml" />
+    <Content Include="Views\MEMBERCREDs\Delete.cshtml" />
+    <Content Include="Views\MEMBERCREDs\Details.cshtml" />
+    <Content Include="Views\MEMBERCREDs\Edit.cshtml" />
+    <Content Include="Views\MEMBERCREDs\Index.cshtml" />
+    <Content Include="Views\ADMINs\Create.cshtml" />
+    <Content Include="Views\ADMINs\Delete.cshtml" />
+    <Content Include="Views\ADMINs\Details.cshtml" />
+    <Content Include="Views\ADMINs\Edit.cshtml" />
+    <Content Include="Views\ADMINs\Index.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Trends\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

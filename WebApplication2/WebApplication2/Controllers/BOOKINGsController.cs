@@ -156,7 +156,25 @@ namespace WebApplication2.Controllers
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
+		public ActionResult DeleteAll()
+		{
+			// Retrieve all bookings from the database
+			var bookings = db.BOOKINGS.ToList();
+
+			// Remove all bookings from the database
+			foreach (var booking in bookings)
+			{
+				db.BOOKINGS.Remove(booking);
+			}
+
+			// Save the changes to the database
+			db.SaveChanges();
+
+			return RedirectToAction("Index");
+		}
+
+
+		protected override void Dispose(bool disposing)
         {
             if (disposing)
             {

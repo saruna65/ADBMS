@@ -1,0 +1,73 @@
+﻿@model WebApplication2.Models.ADMIN
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<head>
+    <title>Login</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS to center the card */
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            background-image: url('../Assets/dumbbells-floor-gym-ai-generative.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .full-height {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 350px;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container-fluid full-height">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Login</h2>
+
+                        @using (Html.BeginForm())
+                        {
+                            @Html.ValidationSummary(true)
+
+                            <div class="form-group">
+
+                                @Html.TextBoxFor(model => model.NAME, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.NAME)
+                            </div>
+
+                            <div class="form-group">
+
+                                @Html.PasswordFor(model => model.PASSWORD, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.PASSWORD)
+                            </div>
+
+                            <button type="submit" class="btn btn-dark btn-block">Login</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
